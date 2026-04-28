@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <title>Css office art</title>
+    <style>
+        body {
+            background: linear-gradient(to top, #cbbeb5, #e8e2db);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           min-height: 100vh;
+        }      
+        .me{
+            position: relative;          
+            height:500px;
+            width:350;          
+       }
+        .you{
+            position: absolute;
+            top:200px;
+            left:30px;
+        }
+        .wall{
+            background: linear-gradient(to top, #cbbeb5, #e8e2db);
+        }
+        .table {
+            position: relative;
+            top:100px;
+            left:0px;
+            width:300px;
+            height:200px;
+        }
+        .parallelogram {
+            position: relative;       
+            width: 100%;
+            height: 100px;
+            background: Brown;
+            transform: skew(-20deg);
+            z-index:2;
+          }
+    .leg {
+      width:50px;
+      height: 100px;
+      background: #333;
+      position: absolute;
+      top:50px;
+      transform: skewY(-60deg);
+    }
+    .leg::before{
+        content:"";
+        position: absolute;
+      width:25px;
+      height: 100px;
+      background:  black;
+      top:415px;
+      right:-230px;
+      transform: skewY(-60deg);
+    }
+    .drawer{
+      width:150px;
+      height: 88px;
+      background: #333;
+      position: absolute;
+      top:100px;
+    right:43px;
+    z-index:3;
+    }
+    .drawer::before{
+        content:"";
+        position: absolute;
+      width:130px;
+      height: 40px;
+      background: #ff95a9;
+      top:2px;
+      left:10px;
+      }
+.drawer::after{
+        content:"";
+        position: absolute;
+      width:130px;
+      height: 40px;
+      background: #ff95a9;
+      top:45px;
+      left:10px;
+      }
+            .drawer-handle{
+                width:50px;
+      height: 8px;
+      background: #333;
+      position: absolute;
+      top:120px;
+    right:90px;
+    z-index:3;
+                }
+                .drawer-handle::before{
+                    content:"";
+        width:50px;
+      height: 8px;
+      background: #333;
+      position: absolute;
+      top:40px;
+    left:0px;
+    z-index:6;
+      }
+.mug {
+      position: absolute;
+      width: 35px;
+      height: 45px;
+      background: #d54a26;
+      border-radius: 5px;
+      bottom: 115px;
+      top:100px;
+      left: 75%;
+      z-index: 2;
+    }
+
+    .mug-handle {
+      position: absolute;
+      width: 12px;
+      height: 20px;
+      border: 3px solid #d54a26;
+      border-left: none;
+      border-radius: 0 10px 10px 0;
+      left: 90%;
+      top: 8px;
+    }
+
+    /* Steam animation */
+    .steam {
+      position: absolute;
+      width: 8px;
+      height: 30px;
+      background: linear-gradient(to top, rgba(255,255,255,0.6), transparent);
+      top: -35px;
+      left: 10px;
+      border-radius: 50%;
+      animation: rise 2s infinite ease-in-out;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(-10px) scaleX(1.1);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateY(-20px) scaleX(1.3);
+        opacity: 0;
+      }
+    }
+    .office-file{
+        position: absolute;
+        top:120px;
+        left:50px;
+        }
+        .file{
+            width:50px;
+            height:60px;
+            font-family:roboto;
+            background: yellow ;
+            transform: skew(-20deg);
+            position: absolute;
+        z-index:4;
+        box-shadow:2px 2px 0 white,
+4px 3px 0 white,5px 4px 0 white;
+        }
+        .monitor{
+        position: absolute;
+        top:70px;
+        left:140px;
+        z-index:4;
+        }
+        .screen{
+            width:70px;
+            height:60px;
+            background: black;
+            border-radius:5px;
+            }
+             .base{
+            width:70px;
+            height:10px;
+            background: black;
+            border-radius:5px;
+            
+            }
+      .chair{
+                    position: absolute;
+                    left:130px;
+                    top:20px;
+                    width:100px;
+                     height:200px;
+                     
+                     display:flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-items: center;
+                     z-index:1;
+                     }
+                 .backrest{
+                     background: #ff7f6a ;
+                     width:100%;
+                     height:60%;
+                     border-radius:10px;
+                     }
+                  .seat{
+                      width:80%;
+                      height:20px;
+                      background: #ff7f6a ;
+                      border-radius:10px;
+                      }
+                  .stand{
+                      width:10px;
+                      height:50px;
+                      background: black ;
+                      }
+                  .base{
+                      width:70px;
+                      height:10px;
+                      background: black ;
+                      border-radius:5px;
+                      }
+            
+            .window-container {
+      width: 260px;
+      height: 260px;
+      background: #5c5c5c;
+      position: absolute;
+      top:0px ;
+      box-shadow: 0 0 5px rgba(0,0,0,0.4);
+      z-index:0;
+    }
+
+    .glass-grid {
+      width: 220px;
+      height: 220px;
+      background: #a6dcee;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 4px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      box-shadow: inset -4px -4px 10px rgba(255,255,255,0.2),
+                  inset 4px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .pane {
+      background: linear-gradient(135deg, #a6dcee, #7ecbde);
+      border: 1px solid #444;
+    }
+
+    .curtain {
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 100%;
+      background: #b22222;
+      border-radius: 0 20px 20px 0;
+      box-shadow: inset -3px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .curtain.right {
+      right: 0;
+      border-radius: 20px 0 0 20px;
+      left: auto;
+      box-shadow: inset 3px 0 5px rgba(0, 0, 0, 0.2);
+    }
+      </style>
+</head>
+<body>
+ 
+<div class="me">
+    <div class="you">
+  <div class="table">
+    <div class="parallelogram"></div>
+    <div class="leg"></div>
+    <div class="drawer"></div>
+    <div class="drawer-handle"></div>
+    
+      </div>
+      <div class="coffe-cup">
+      <div class="mug">
+      <div class="mug-handle"></div>
+      <div class="steam"></div>
+    </div>
+    </div>
+    <div class="office-file">
+    <div class="file">css office file</div>
+    </div>
+    <div class="monitor">
+    <div class="screen"></div>
+      <div class="base"></div>
+    </div>
+   
+     <div class="chair">
+        <div class="backrest"></div>
+        <div class="seat"></div>
+        <div class="stand"></div>
+        <div class="base"></div>
+       </div>
+       
+        </div>
+        
+         <div class="window-container">
+    <div class="curtain"></div>
+    <div class="glass-grid">
+      <div class="pane"></div>
+      <div class="pane"></div>
+      <div class="pane"></div>
+      <div class="pane"></div>
+    </div>
+    <div class="curtain right"></div>
+  </div>
+  
+   </div>
+</body>
+</html>
+
